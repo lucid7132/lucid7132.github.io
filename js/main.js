@@ -1,0 +1,9 @@
+const button=document.querySelector(".menu"),nav=document.querySelector("nav"),header=document.querySelector(".header");
+function closeMenu(){button.setAttribute("aria-expanded","false");nav.classList.remove("open");document.body.classList.remove("lock")}
+button.addEventListener("click",()=>{const open=button.getAttribute("aria-expanded")==="true";button.setAttribute("aria-expanded",String(!open));nav.classList.toggle("open",!open);document.body.classList.toggle("lock",!open)});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));document.addEventListener("keydown",e=>e.key==="Escape"&&closeMenu());
+function scrollHeader(){header.classList.toggle("scrolled",scrollY>20)}addEventListener("scroll",scrollHeader,{passive:true});scrollHeader();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));document.querySelector("[data-year]").textContent=new Date().getFullYear();
+function card(p,i){return `<article class="project reveal"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${p.title}</h3><p class="summary">${p.description}</p></div><dl class="details"><div><dt>ROLE</dt><dd>${p.role}</dd></div><div><dt>STACK</dt><dd>${p.skills.join(" · ")}</dd></div><div><dt>RESULT</dt><dd>${p.result}</dd></div></dl><a class="circle" href="${p.github}" target="_blank" rel="noreferrer" aria-label="${p.title} GitHub 저장소">GH</a></article>`}
+async function projects(){const list=document.querySelector("#project-list");try{const res=await fetch("./data/projects.json");if(!res.ok)throw Error("프로젝트 데이터를 불러오지 못했습니다.");const data=await res.json();list.innerHTML=data.map(card).join("");list.querySelectorAll(".reveal").forEach(el=>observer.observe(el))}catch(e){list.innerHTML=`<p class="loading">${e.message}</p>`}}projects();

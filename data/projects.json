@@ -1,0 +1,10 @@
+[
+  {
+    "title": "지역별 귀농 인구 추이 분석 및 2025년 예측",
+    "description": "강원·경남·경북·전남의 농지 실거래가, 기후, 작물 가격을 통합하고 CatBoost로 2025년 귀농 인구를 예측한 데이터 분석 프로젝트입니다.",
+    "role": "데이터 수집 · 전처리 · 모델링 · 시각화",
+    "skills": ["Python", "Pandas", "CatBoost", "Matplotlib"],
+    "result": "지역별 추이와 주요 영향 변수를 시각화",
+    "github": "https://github.com/lucid7132/dataprograming"
+  }
+]
