@@ -1,5 +1,14 @@
 [
   {
+    "year": "2026",
+    "category": "MEDICAL AI · COMPUTER VISION",
+    "title": "SYNCOSCOPE",
+    "description": "대장내시경 영상에서 용종 의심 영역을 실시간 분할하고 의료진의 검사·판독 흐름을 지원하는 웹 프로토타입입니다.",
+    "award": "강원대학교 의료 AI 해커톤 최우수상 · 1위",
+    "skills": ["SegFormer-B0", "ONNX Runtime", "React", "TypeScript"],
+    "github": "https://github.com/lucid7132/syncoscope-2026"
+  },
+  {
     "year": "2025",
     "category": "DATA ANALYSIS · MACHINE LEARNING",
     "title": "지역별 귀농 인구 추이 분석 및 예측",

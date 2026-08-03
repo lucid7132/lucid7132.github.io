@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="컴퓨터 비전을 연구하는 lucid7132의 프로젝트 포트폴리오">
-  <meta name="theme-color" content="#f7fafc">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="lucid7132 — Computer Vision Research">
-  <meta property="og:description" content="컴퓨터 비전을 연구하고, 이미지 속 의미를 탐구합니다.">
+  <meta property="og:description" content="컴퓨터 비전을 연구하고 이미지 속 의미를 탐구합니다.">
   <meta property="og:type" content="website"><meta property="og:url" content="https://lucid7132.github.io">
   <title>lucid7132 — Computer Vision Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,41 +13,49 @@
   <link rel="stylesheet" href="./css/style.css"><script src="./js/main.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">본문으로 건너뛰기</a>
+<a class="skip" href="#home">홈 화면으로 건너뛰기</a>
 <header class="header">
-  <a class="brand" href="#top"><i></i><span>lucid7132</span></a>
+  <a class="brand page-link" href="#home" data-page="home"><i></i><span>lucid7132</span></a>
   <button class="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><b>메뉴</b></button>
-  <nav id="nav"><a href="#projects">Project History</a><a href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub ↗</a><a class="nav-cta" href="#contact">Contact</a></nav>
+  <nav id="nav" aria-label="주요 화면">
+    <a class="page-link" href="#home" data-page="home">Home</a>
+    <a class="page-link" href="#projects" data-page="projects">Projects</a>
+    <a class="page-link" href="#contact" data-page="contact">Contact</a>
+    <a class="github-link" href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </nav>
 </header>
 <main id="main">
-<section class="hero" id="top">
-  <div class="hero-copy reveal">
-    <p class="eyebrow"><i></i>COMPUTER VISION RESEARCH</p>
-    <h1>lucid<span>7132</span></h1>
-    <p class="lead">컴퓨터 비전을 연구하고,<br>이미지 속 의미를 탐구합니다.</p>
-    <div class="actions"><a class="btn primary" href="#projects">프로젝트 연혁 <span>↓</span></a><a class="btn text" href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-  </div>
-  <div class="visual reveal" aria-label="의료 영상 스캔을 표현한 그래픽">
-    <div class="scan-card" aria-hidden="true">
-      <div class="scan-head"><span><i></i>VISION LAB</span><b>LIVE</b></div>
-      <div class="scan-view">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <div class="scan-orbit"><i></i><i></i><b></b></div>
-        <div class="scan-line"></div>
-      </div>
-      <div class="scan-foot"><span>IMAGE ANALYSIS</span><div><i></i><i></i><i></i><i></i></div><b>CV / 01</b></div>
+  <section class="page home active" id="home" data-page-panel="home" aria-hidden="false">
+    <div class="home-inner">
+      <p class="eyebrow"><i></i>COMPUTER VISION RESEARCH</p>
+      <h1>lucid<span>7132</span></h1>
+      <p class="lead">컴퓨터 비전을 연구하고,<br>이미지 속 의미를 탐구합니다.</p>
+      <div class="actions"><a class="btn primary page-link" href="#projects" data-page="projects">프로젝트 보기 <span>→</span></a><a class="btn text" href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub ↗</a></div>
     </div>
-  </div>
-  <div class="hero-meta"><span>RESEARCH PORTFOLIO</span><span>SEOUL, KR</span></div>
-</section>
-<section class="section projects" id="projects">
-  <div class="section-head reveal"><p class="num">02 / PROJECT HISTORY</p><h2>수행한 프로젝트 연혁</h2><p>연도별 연구와 프로젝트 기록입니다.<br>각 항목을 누르면 GitHub 저장소로 이동합니다.</p></div>
-  <div class="timeline" id="project-list"><p class="loading">프로젝트를 불러오는 중입니다.</p></div>
-</section>
-<section class="contact" id="contact">
-  <p class="num reveal">03 / CONTACT</p>
-  <div class="contact-inner reveal"><div><span>LET'S CONNECT</span><h2>새로운 연구와<br>협업에 열려 있습니다.</h2></div><a href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub에서 보기 <span>↗</span></a></div>
-  <footer><p>© <span data-year></span> lucid7132</p><p>Computer Vision Research Portfolio</p><a href="#top">맨 위로 ↑</a></footer>
-</section>
+    <div class="page-foot"><span>RESEARCH PORTFOLIO</span><span>01 / 03</span><span>SEOUL, KR</span></div>
+  </section>
+
+  <section class="page projects" id="projects" data-page-panel="projects" aria-hidden="true">
+    <div class="projects-inner">
+      <div class="section-head">
+        <p class="num">PROJECT HISTORY</p>
+        <h2>수행한 프로젝트</h2>
+        <p>연구와 프로젝트 기록입니다.<br>항목 전체를 누르면 GitHub 저장소로 이동합니다.</p>
+      </div>
+      <div class="timeline" id="project-list"><p class="loading">프로젝트를 불러오는 중입니다.</p></div>
+    </div>
+    <div class="page-foot"><span>SELECTED WORK</span><span>02 / 03</span><a class="page-link" href="#contact" data-page="contact">NEXT: CONTACT →</a></div>
+  </section>
+
+  <section class="page contact" id="contact" data-page-panel="contact" aria-hidden="true">
+    <div class="contact-inner">
+      <p class="num">CONTACT</p>
+      <span class="contact-label">LET'S CONNECT</span>
+      <h2>새로운 연구와<br>협업에 열려 있습니다.</h2>
+      <a class="contact-link" href="https://github.com/lucid7132" target="_blank" rel="noreferrer">GitHub에서 연락하기 <span>↗</span></a>
+    </div>
+    <div class="page-foot"><span>© <span data-year></span> lucid7132</span><span>03 / 03</span><a class="page-link" href="#home" data-page="home">BACK TO HOME ↑</a></div>
+  </section>
 </main>
+<div class="transition-line" aria-hidden="true"></div>
 </body></html>
